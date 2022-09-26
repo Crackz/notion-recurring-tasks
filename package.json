@@ -9,7 +9,8 @@
     "start": "ts-node src/index.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "format": "prettier --write src/**/*.ts"
+    "format": "prettier --write src/**/*.ts",
+    "deploy": "pm2 start ecosystem.config.js"
   },
   "keywords": [],
   "author": "",
