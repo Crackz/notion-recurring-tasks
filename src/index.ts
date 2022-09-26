@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
+import { DateTime } from "luxon";
 
 class App {
   private _notion: Client;
@@ -62,16 +63,17 @@ class App {
     const dateStr =
       task.properties[process.env.TASK_MANAGER_NEXT_DUE_FIELD_NAME as string]
         .formula.string;
+    console.log("dateStr: ", dateStr);
+    const date = DateTime.fromFormat(dateStr, "DDD");
+    console.log("ISO: ", date.toISO());
 
-    const date = new Date(dateStr);
-    return date.toISOString();
+    return date.toISO();
   }
 
   async start() {
     const tasks = await this.getDoneRecurringTasks();
-    console.log(tasks);
     tasks.map((task: any) => {
-      // console.log(task.properties);
+      console.log(`Task: ${task.url} is updated`);
     });
 
     await this.updateDoneRecurringTasks(tasks);
