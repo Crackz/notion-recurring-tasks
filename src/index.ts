@@ -3,9 +3,7 @@ import { CronJob } from "cron";
 
 const app = new App();
 
-// To Modify The CronJob Time
-// Check https://crontab.guru/#*_*_*_*_*
-const job = new CronJob("* * * * *", () => {
+const job = new CronJob(process.env.CRON_TIME as string, () => {
   app
     .execute()
     .then(() => console.log("Tasks Are Updated Successfully"))
