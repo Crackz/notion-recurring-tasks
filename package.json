@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/cron": "^2.0.0",
     "@types/dotenv": "^8.2.0",
-    "@types/luxon": "^3.0.1",
+    "@types/luxon": "^3.0.2",
     "@types/node": "^18.0.3",
     "prettier": "^2.7.1",
     "ts-node": "^10.8.2",
