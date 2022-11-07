@@ -18,12 +18,12 @@
     "@notionhq/client": "^2.0.0",
     "cron": "^2.1.0",
     "dotenv": "^16.0.1",
-    "luxon": "^3.0.4"
+    "luxon": "^3.1.0"
   },
   "devDependencies": {
     "@types/cron": "^2.0.0",
     "@types/dotenv": "^8.2.0",
-    "@types/luxon": "^3.0.1",
+    "@types/luxon": "^3.1.0",
     "@types/node": "^18.0.3",
     "prettier": "^2.7.1",
     "ts-node": "^10.8.2",
